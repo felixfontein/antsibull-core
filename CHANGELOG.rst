@@ -4,6 +4,25 @@ antsibull-core Release Notes
 
 .. contents:: Topics
 
+v3.6.0
+======
+
+Release Summary
+---------------
+
+Feature and bugfix release.
+
+Minor Changes
+-------------
+
+- Make the Galaxy client more robust for alternative Galaxy implementations (https://github.com/ansible-community/antsibull-core/pull/198).
+- There is a new config file option ``require_galaxy_checksums``, defaulting to ``false``, which can be used to force antsibull-core to require checksums provided by Galaxy implementations. Consumers of the antsibull-core library have to explicitly request that this flag is used by downloading collections with ``require_checksum=None``; the default is ``require_checksum=True``, which is the same behavior as before (https://github.com/ansible-community/antsibull-core/pull/198).
+
+Bugfixes
+--------
+
+- Make ansible-core version from source tree extraction more robust, and make it work with Python 3.14 as well (https://github.com/ansible-community/antsibull-core/pull/202).
+
 v3.5.0
 ======
 
